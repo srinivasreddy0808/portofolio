@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background-color: #ffffff; /* Light mode background */
+  color: #1f2937; /* Light mode text color */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app.dark {
+  background-color: #1a202c; /* Dark mode background */
+  color: #e2e8f0; /* Dark mode text color */
+}
