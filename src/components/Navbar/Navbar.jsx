@@ -46,7 +46,18 @@ const Navbar = ({ activeSection }) => {
 
         <div className={styles.mobileMenu}>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <FiX /> : <FiMenu />}
+            {isMenuOpen ? (
+              <FiX
+                size={18}
+                style={{
+                  color: "black",
+                  border: "none",
+                  backgroundColor: "white",
+                }}
+              />
+            ) : (
+              <FiMenu size={18} />
+            )}
           </button>
         </div>
       </div>

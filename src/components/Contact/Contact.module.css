@@ -21,12 +21,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  width: 100%; /* Makes sure it fits inside the grid */
+  max-width: 100%; /* Prevents oversizing */
+  min-width: 0; /* Important: Prevents grid items from stretching too wide */
 }
 
 .formGroup {
@@ -49,6 +54,8 @@
   font-size: 1rem;
   color: #1f2937;
   transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .input:focus,
@@ -77,6 +84,10 @@
   gap: 1.5rem;
   padding: 50px;
   padding-top: 20px;
+  box-sizing: border-box;
+  width: 100%; /* Makes sure it fits inside the grid */
+  max-width: 100%; /* Prevents oversizing */
+  min-width: 0; /* Important: Prevents grid items from stretching too wide */
 }
 
 .infoTitle {
@@ -117,5 +128,6 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+    box-sizing: border-box;
   }
 }
